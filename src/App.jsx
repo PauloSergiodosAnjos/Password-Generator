@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Input from "./components/input";
 
 export default function App() {
   const [password, setPassword] = useState("")
@@ -27,7 +28,7 @@ export default function App() {
         const index = Math.floor(Math.random() * specialCaracters.length);
         newPassWord += specialCaracters[index]
       }
-      for (let i = 0; i < passWordSize / 2; i++) {
+      for (let i = 1; i <= passWordSize / 2; i++) {
         const index = Math.floor(Math.random() * caracters.length);
         newPassWord += caracters[index]
       }
@@ -48,15 +49,10 @@ export default function App() {
       <h1>Gerador de senhas</h1>
       <div>
         <label htmlFor="passWordSize">Tamanho da senha:</label>
-        <input
-          type="number" 
-          name="passWordSize" 
-          id="passWordSize"
-          min={1}
-          value={passWordSize}
-          onChange={(ev)=>{
-            setPassWordSize(ev.target.value)
-          }}/>
+        <Input
+          passWordSize={passWordSize}
+          setPassWordSize={setPassWordSize}
+        />
       </div>
       <div
       style={{
