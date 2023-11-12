@@ -13,7 +13,7 @@ export default function Input(props) {
             min={1}
             value={props.passWordSize}
             onChange={(ev)=>{
-                props.setPassWordSize(ev.target.value)
+                props.setPassWordSize(+ev.target.value)
             }}/>
     )
 }
