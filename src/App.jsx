@@ -67,8 +67,8 @@ export default function App() {
       <div>
         <label htmlFor="customSize">Tamanho da senha:</label>
         <Input
-          passWordSize={customSize}
-          setPassWordSize={setCustomSize} //passando os valores das props do componente
+          customSize={customSize}
+          setCustomSize={setCustomSize} //passando os valores das props do componente
         />
       </div>
       ): null}

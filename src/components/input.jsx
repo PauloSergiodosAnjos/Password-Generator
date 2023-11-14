@@ -11,9 +11,9 @@ export default function Input(props) {
             type="Number"
             id="passWordSize"
             min={1}
-            value={props.passWordSize}
+            value={props.customSize}
             onChange={(ev)=>{
-                props.setPassWordSize(+ev.target.value)
+                props.setCustomSize(+ev.target.value) //o set customSize fica no lugar do setPassWordSize do parametro
             }}/>
     )
 }
